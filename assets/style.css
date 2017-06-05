@@ -1,0 +1,31 @@
+.navbar {
+    padding: 10px;
+    background-color: #ffff00;
+    height: 190px;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    background-image: url("img/body.png");
+}
+button {
+    font-size: 20px;
+    margin: 5px;
+    text-transform: capitalize;
+    background-color: #DAA520;
+}
+
+.item {
+    width: 22sa0px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #eeeeee;
+    text-shadow: #080808 3px 5px;
+}
+
+.submit {
+    background-image: url("img/submit.png");
+    background-size: 270px 200px;
+    height: 200px;
+    width: 275px;
+}
