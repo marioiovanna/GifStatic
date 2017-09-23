@@ -1,7 +1,6 @@
 
 $(document).ready(function () {
 
-var animate = 0;
 
 //BTN topics prefix
 var topics = ["Bart", "Lisa", "Marge", "Maggie", "Homer"];
@@ -28,14 +27,20 @@ function displayTopicInfo() {
         for (var i = 0; i < results.length; i++) {
             var imageDiv = $("<div class='item'>");
             var rating = results[i].rating;
+            var still = results[i].images.original_still.url;
+            var animate = results[i].images.original.url;
             var p = $("<p>").text("Rating: " + rating);
-            var img = $("<img>");
+            var img = $("<img class='thumbnail' height='400px'>");
 
-            img.attr("src", results[i].images.fixed_height_still.url).val(i);
+            img.attr("src", still);
             imageDiv.append(p);
             imageDiv.prepend(img);
 
             $("#gifs").prepend(imageDiv);
+
+            $(img).on('click', function () {
+                img.attr("src", animate);
+            })
         }
     });
 }
@@ -63,20 +68,5 @@ renderButtons();
 
 $(document).on("click", ".topic", displayTopicInfo);
 renderButtons();
-
-
-// Gifs Animation
-$('.item').on('click', function () {
-
-    if (animate === 0) {
-        $(this).attr("src", results(this.value).images.fixed_width.url);
-        animate++;
-    } else {
-        $(this).attr("src", results(this.value).images.fixed_height_still.url);
-    }
-
-    console.log()
-});
-
 
 });

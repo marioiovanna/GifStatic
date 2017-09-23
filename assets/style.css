@@ -16,7 +16,7 @@ button {
 }
 
 .item {
-    width: 22sa0px;
+    width: 220px;
     font-size: 30px;
     font-weight: bold;
     color: #eeeeee;
@@ -28,4 +28,12 @@ button {
     background-size: 270px 200px;
     height: 200px;
     width: 275px;
+}
+
+#result {
+    margin: 0 10% 0 10%;
+}
+
+img {
+    display: inline;
 }
