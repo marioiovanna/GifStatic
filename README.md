@@ -1,4 +1,4 @@
-# GifStatic
+# Gif Static
 
 ### Gif Generator by AJAX request...
 
